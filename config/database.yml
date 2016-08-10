@@ -84,6 +84,10 @@ test:
 #
 production:
   <<: *default
-  database: marqoo_production
-  username: marqoo
-  password: <%= ENV['MARQOO_DATABASE_PASSWORD'] %>
+  # database: marqoo_production
+  # username: marqoo
+  # password: <%= ENV['MARQOO_DATABASE_PASSWORD'] %>
+  database: marqoo_development
+  host: localhost
+  username: postgres
+  password: Oneclick1@

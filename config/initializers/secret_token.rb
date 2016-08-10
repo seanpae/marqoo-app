@@ -1,0 +1,1 @@
+Marqoo::Application.config.secret_token = 'd7bdf04b9c6e5a2287c0a45b0233e4f3ec1df0969b03cbdcfd2e3a83b9846a062ac6e4b836d72c93ece5f6bffb26cb683b90061f0d0928002f4ba403b07419c4'

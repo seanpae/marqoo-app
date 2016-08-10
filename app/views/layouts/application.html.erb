@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marqoo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The most viewed videos on social networks are always the ones showing epic moments in their lives. What is marqoo Moment? The best moments of your life.">
+  <link type="image/png" href="<%= asset_path('icon.png') %>" rel="icon" />
+  <meta name="google-site-verification" content="zcAfh7_Cg1QzYbuIfwwBSpE10xnRlqZ09HWe-4neMgM" />
+
+  <meta name="author" content="Marqoo">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <%= render :partial => 'layouts/header' %>
+<%= yield %>
+<%= render :partial => 'layouts/footer' %>
+</body>
+</html>

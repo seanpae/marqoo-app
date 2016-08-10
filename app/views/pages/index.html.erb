@@ -1,0 +1,148 @@
+
+<div class="homeSection" id="appIntro">
+	<div class="container">
+		<div class="homeCopy">
+			<h1>Introducing <b>MarQoo</b></h1>
+			<p>Watch current and trending videos streamed in from the most popular urban sites on the web.</p>
+			<div class="download">
+				<a href="#" class="btn btn-default">Download for iPhone</a>
+			</div>
+		</div>
+		<div class="phone">
+			<%= image_tag "mq-app.png" %>
+		</div>	
+	</div>
+</div>
+<div class="homeSection" id="features">
+	<div class="container">
+		<div class="title">
+			<h2>Tired of going to 10 different sites to find the best urban videos?<br/>
+<b>MarQoo</b> is a collection of the most popular urban videos and is organized to help you easily find the videos you want to watch.</h2>
+		</div>
+		<div class="features">
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "beauty.png" %>
+				</div>
+				<div class="title">
+					<h2>Beauty</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "comedy.png" %>
+				</div>
+				<div class="title">
+					<h2>Comedy</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "entertainment.png" %>
+				</div>	
+				<div class="title">
+					<h2>Entertainment</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "faith.png" %>
+				</div>
+				<div class="title">
+					<h2>Faith</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "fashion.png" %>
+				</div>
+				<div class="title">
+					<h2>Fashion</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "music.png" %>
+				</div>	
+				<div class="title">
+					<h2>Music</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "news.png" %>
+				</div>
+				<div class="title">
+					<h2>News</h2>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="icon">
+					<%= image_tag "sports.png" %>
+				</div>
+				<div class="title">
+					<h2>Sports</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="homeSection" id="appPreview">
+	<div class="container">
+		<div class="in-hand">
+			<%= image_tag "hand.png" %>
+		</div>
+		<div class="features">
+			<h2><b>MarQoo</b> is a sleek, user-friendly way to watch, upload, and share videos.</h2>
+			<div class="download">
+				<a href="#" class="btn btn-default">Download for iPhone</a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="homeSection " id="videos">
+	<div class="container">
+		<div class="title">
+			<h2>Featured Videos</h2>
+		</div>
+		<div class="videos">
+			<% @videos.each do |video| %>
+				<%= link_to(video) do %>
+					<% if video.video.file? %>
+						<div class="homeVideo" style="background: url(<%= video.video.url(:thumb) %>);background-size: cover;">
+							<div class="overlay">
+								<div class="play">
+									<%= image_tag "play.png" %>
+								</div>	
+							</div>
+						</div>
+					<% else %> 
+						<div class="homeVideo" style="background: url(<%= video.thumbnail_url %>);background-size: cover;">
+							<div class="overlay">
+								<div class="play">
+									<%= image_tag "play.png" %>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<div class="homeSection reverse" id="appPreview">
+	<div class="container">
+		<div class="features">
+			<h2>Discover <b>MarQoo</b> videos through categories such as Music, Entertainment, Faith, and more.</h2>
+			<div class="download">
+				<a href="#" class="btn btn-default">Download for iPhone</a>
+			</div>
+		</div>
+		<div class="in-hand">
+			<%= image_tag "hand-2.png" %>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>

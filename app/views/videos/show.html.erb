@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="branding video">
+		<div class="logo">
+			<%= link_to image_tag("logo.png"), root_path %>
+		</div>
+	</div> 
+	<div class="video">
+		<div class="videoView">
+			<% if @video.video.file? %>
+				<video id="video" controls="controls">
+						<source src="<%= @video.video.url(:medium) %>" type="video/mp4"> 
+				</video>
+			<% else %>
+					<iframe width="100%" height="100%" src="<%= @video.video_source.gsub('watch?v=', 'embed/') %>" frameborder="0" allowfullscreen></iframe>
+			<% end %>
+		</div>
+		<div class="videoInfo">
+			<div class="title">
+				<h2><%= @video.category.name %></h2>
+				<p><%= @video.description %></p>
+			</div>
+			<div class="metrics">
+				<p><%= @video.impressionist_count %> Views | <%= @comments.count %> Comments | <%= @video.likes.count %> Likes </p>
+			</div>
+		</div>
+		<% if @comments.any? %>
+			<div class="videoComments">
+				<% @comments.each do |comment| %>
+					<div class="comment">
+						<div class="avatar">
+							<%= image_tag comment.user.avatar.url(:thumb) %>
+						</div>
+						<div class="commentContent">
+							<h2><%= comment.user.name %></h2>
+							<p class="content"><%= comment.content %></p>
+							<p><%= time_ago_in_words(comment.created_at) %> ago</p>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>

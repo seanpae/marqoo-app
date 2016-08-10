@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
       :path => "/:class/:attachment/:id_partition/:style/:filename",
       :styles => { :thumb => "75x75^", :large => "100x100^" },
       :convert_options => { :thumb => " -gravity center -crop '60x60+0+0'", :large => " -gravity center -crop '2000x200+0+0'"},
-      :default_url => 'https://s3-us-west-2.amazonaws.com/marqooapp/default.jpg'
+      :default_url => 'https://s3-us-west-1.amazonaws.com/marqooapp/default.jpg'
 
       validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 

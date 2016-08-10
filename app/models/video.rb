@@ -18,7 +18,7 @@ class Video < ActiveRecord::Base
     :thumb => { :geometry => "600x600#", :format => 'jpg', :time => 2, :auto_rotate => true}
    },:processors => [:ffmpeg, :qtfaststart],
   # :processors => [:transcoder],
-  # :storage => "s3",
+  :storage => "s3",
   # :bucket => ENV["aws_bucket"],
   # :s3_credentials => {:access_key_id => ENV["aws_access_key"],
   #                   :secret_access_key => ENV["aws_secret_access"]},

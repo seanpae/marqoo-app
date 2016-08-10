@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'pages#index'
   get "privacy_policy" => "pages#privacy" # for web site
-   get "terms_condition" => "pages#terms" # for web site
-    get "contact" => "pages#contact" # for web site
+  get "terms_condition" => "pages#terms" # for web site
+  get "contact" => "pages#contact" # for web site
   get "/privacy" => "staticpage#privacy_policy" #for api
   get "/tc" => "staticpage#terms_condition" # for api
   mount_opro_oauth

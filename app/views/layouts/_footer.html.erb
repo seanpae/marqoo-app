@@ -5,10 +5,10 @@
 		</div>
 		<div class="menu">
 			<ul class="nav nav-pills">
-			  <li role="presentation" class="active"><a href="#">Home</a></li>
+			  <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
 			  <li role="presentation"><%= link_to 'Terms of Service', terms_condition_path %></li>
 			  <li role="presentation"><%= link_to 'Privacy Policy', privacy_policy_path %></li>
-			  <li role="presentation"><a href="mailto:contact@marqooapp.com">Contact Us</a></li>
+			  <li role="presentation"><%= link_to 'Contact Us', contact_path %></li>
 			</ul>
 		</div>
 		<div class="clearfix"></div>

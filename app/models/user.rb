@@ -15,12 +15,12 @@ class User < ActiveRecord::Base
   has_attached_file :avatar,  
      :storage => "s3",
      :s3_credentials => {
-          # :bucket => :marqoo,
-          # :access_key_id => "AKIAJFQU5UIXLKFTRCLQ",
-          # :secret_access_key => "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"
-          :bucket => :marqooapp,
-          :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
-          :secret_access_key => "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"
+          # :bucket => :marqooapp,
+          # :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
+          # :secret_access_key => "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"
+          :bucket => :marqoomedia,
+          :access_key_id => "AKIAJICPI3ZBJ5FL5ZPQ",
+          :secret_access_key => "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"
       },
       :url => ":s3_domain_url",
       :s3_protocol => :https,
@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
       :styles => { :thumb => "75x75^", :large => "100x100^" },
       :convert_options => { :thumb => " -gravity center -crop '60x60+0+0'", :large => " -gravity center -crop '2000x200+0+0'"},
       # :default_url => 'https://s3-us-west-2.amazonaws.com/marqoo/default.jpg'
-      :default_url => 'https://s3.amazonaws.com/marqooapp/default.jpg'
+      :default_url => 'https://s3.amazonaws.com/marqoomedia/default.jpg'
       validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 

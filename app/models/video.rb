@@ -18,17 +18,14 @@ class Video < ActiveRecord::Base
     :thumb => { :geometry => "600x600#", :format => 'jpg', :time => 2, :auto_rotate => true}
    },:processors => [:ffmpeg, :qtfaststart],
   # :processors => [:transcoder],
-  :storage => "s3",
-  # :bucket => ENV["aws_bucket"],
-  # :s3_credentials => {:access_key_id => ENV["aws_access_key"],
-  #                   :secret_access_key => ENV["aws_secret_access"]},
-     :s3_credentials => {
-          # :bucket => :marqoo,
-          # :access_key_id => "AKIAJFQU5UIXLKFTRCLQ",
-          # :secret_access_key => "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"
-          :bucket => :marqooapp,   
-          :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
-          :secret_access_key => "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"
+    :storage => "s3",
+    :s3_credentials => {
+          # :bucket => :marqooapp,   
+          # :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
+          # :secret_access_key => "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"
+          :bucket => :marqoomedia,
+          :access_key_id => "AKIAJICPI3ZBJ5FL5ZPQ",
+          :secret_access_key => "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"
       },
       :url => ":s3_domain_url",
       :s3_protocol => :https, 

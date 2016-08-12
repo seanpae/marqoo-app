@@ -1,11 +1,11 @@
 
 development:
-  aws_bucket: "marqooapp"
-  aws_access_key: "AKIAJICPI3ZBJ5FL5ZPQ"
-  aws_secret_access: "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"
+  aws_bucket: "marqoomedia"
+  aws_access_key: "AKIAIFOMCFC3A2GJIPZA"
+  aws_secret_access: "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"
 
 
 production:
-  aws_bucket: "marqooapp"
-  aws_access_key: "AKIAJICPI3ZBJ5FL5ZPQ"
-  aws_secret_access: "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"
+  aws_bucket: "marqoomedia"
+  aws_access_key: "AKIAIFOMCFC3A2GJIPZA"
+  aws_secret_access: "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"

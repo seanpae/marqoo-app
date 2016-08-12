@@ -1,5 +1,5 @@
 app_path = "/home/ubuntu/apps/marqoo-app/current"
-stderr_path "/home/ubuntu/apps/marqoo-app/log/unicorn.stderr.log"
+stderr_path "/home/ubuntu/apps/marqoo-app/current/log/unicorn.stderr.log"
 ##pid   "#{app_path}/current/tmp/pids/unicorn.pid"
 pid   "#{app_path}/tmp/pids/unicorn.pid"
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 4)

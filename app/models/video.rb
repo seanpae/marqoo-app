@@ -24,8 +24,8 @@ class Video < ActiveRecord::Base
           # :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
           # :secret_access_key => "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"
           :bucket => :marqoomedia,
-          :access_key_id => "AKIAJICPI3ZBJ5FL5ZPQ",
-          :secret_access_key => "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"
+          :access_key_id => "AKIAIFOMCFC3A2GJIPZA",
+          :secret_access_key => "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"
       },
       :url => ":s3_domain_url",
       :s3_protocol => :https, 

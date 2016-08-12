@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
           # :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
           # :secret_access_key => "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"
           :bucket => :marqoomedia,
-          :access_key_id => "AKIAIFOMCFC3A2GJIPZA",
-          :secret_access_key => "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"
+          :access_key_id => "AKIAJHLHVL6VQWGDH3ZQ",
+          :secret_access_key => "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"
       },
       :url => ":s3_domain_url",
       :s3_protocol => :https,

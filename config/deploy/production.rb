@@ -6,7 +6,7 @@
 
 set :stage, :staging
 
-server '54.173.15.142', user: 'ubuntu', roles: %w{web app db resque_worker}
+server '54.209.19.197', user: 'ubuntu', roles: %w{web app db resque_worker}
 
 
 # Extended Server Syntax

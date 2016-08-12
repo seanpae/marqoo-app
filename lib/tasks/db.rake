@@ -48,7 +48,7 @@ desc "Restores the database dump at db/APP_NAME.dump."
 task :liverestore => :environment do
 cmd = nil
 with_config do |app, host, db, user|
-cmd = "pg_restore --verbose --host ec2-54-173-15-142.compute-1.amazonaws.com --username postgres --clean --no-owner --no-acl --dbname marqoo_development #{Rails.root}/db/#{app}.dump"
+cmd = "pg_restore --verbose --host ec2-54-209-19-197.compute-1.amazonaws.com --username postgres --clean --no-owner --no-acl --dbname marqoo_development #{Rails.root}/db/#{app}.dump"
 end
 Rake::Task["db:drop"].invoke
 Rake::Task["db:create"].invoke

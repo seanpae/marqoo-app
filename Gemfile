@@ -22,6 +22,7 @@ gem 'impressionist'
 gem 'acts_as_follower'
 gem 'paperclip-av-transcoder' 
 
+gem 'airbrake', '~> 5.4'
 gem 'therubyracer'
 gem 'figaro'
 

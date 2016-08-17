@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
 	has_many :videos
+  has_many :feeds
   
 	has_attached_file :thumbnail, 
      :storage => "s3",

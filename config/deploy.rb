@@ -17,7 +17,7 @@ set :pty, true
 set :ssh_options, {
   forward_agent: true,
   auth_methods: %w(publickey),
-  keys: %w(/home/anuj/Downloads/marqoo.pem)
+  keys: %w(/home/anuj/Downloads/marqooapp.pem)
 }
 
 # Default value for :scm is :git

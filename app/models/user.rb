@@ -1,26 +1,24 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+# validates :description, length: { in: 6..20 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+ 
   has_many :videos
   has_many :comments
   has_many :likes
   has_many :activities 
-
+  has_many :feeds
   acts_as_followable
   acts_as_follower
 
   has_attached_file :avatar,  
      :storage => "s3",
      :s3_credentials => {
-          # :bucket => :marqooapp,
-          # :access_key_id => "AKIAJEP36OYTR2WHJP5Q",
-          # :secret_access_key => "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"
-          :bucket => :marqoomedia,
-          :access_key_id => "AKIAJZTGHMJI7XLAVKTA",
-          :secret_access_key => "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"
+         :bucket => ENV["aws_bucket"],
+          :access_key_id => ENV["aws_access_key"],
+          :secret_access_key => ENV["aws_secret_access"]
       },
       :url => ":s3_domain_url",
       :s3_protocol => :https,

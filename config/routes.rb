@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :feeds
   resources :activities
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -59,6 +60,8 @@ Rails.application.routes.draw do
           get :show_like
         end
       end
+
+
       resources :comments
 
       match '/search' => 'search#index', via: :get
